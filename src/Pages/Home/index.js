@@ -13,7 +13,7 @@ export default function Home() {
     async function loadMovies(){
       const response = await api.get("movie/now_playing", {
         params:{
-          api_key: "",
+          api_key: `${process.env.REACT_APP_API_KEY}`,
           page: 1,
         }
       })
