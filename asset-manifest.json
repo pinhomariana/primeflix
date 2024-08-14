@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/primeflix/static/css/main.1900a3fc.css",
-    "main.js": "/primeflix/static/js/main.5611adbc.js",
+    "main.js": "/primeflix/static/js/main.2c99bb89.js",
     "static/media/fa-solid-900.ttf": "/primeflix/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/fa-brands-400.ttf": "/primeflix/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
     "static/media/fa-solid-900.woff2": "/primeflix/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
@@ -13,10 +13,10 @@
     "static/media/fa-v4compatibility.woff2": "/primeflix/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/primeflix/index.html",
     "main.1900a3fc.css.map": "/primeflix/static/css/main.1900a3fc.css.map",
-    "main.5611adbc.js.map": "/primeflix/static/js/main.5611adbc.js.map"
+    "main.2c99bb89.js.map": "/primeflix/static/js/main.2c99bb89.js.map"
   },
   "entrypoints": [
     "static/css/main.1900a3fc.css",
-    "static/js/main.5611adbc.js"
+    "static/js/main.2c99bb89.js"
   ]
 }
