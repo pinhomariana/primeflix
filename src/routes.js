@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Movies from "./Pages/Movies";
 import Header from "./Components/Header";
@@ -11,7 +11,7 @@ export default function RoutesApp() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/primeflix" element={<Home />} />
         <Route path="/movie/:id" element={<Movies />} />
         <Route path="/favourites" element={<Favourites />} />
         <Route path="*" element={<Error />} />
