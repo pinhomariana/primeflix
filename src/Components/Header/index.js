@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header>
         <Link className='logo' to='/primeflix'>Prime Flix</Link>
-        <Link className='favourites' to='favourites'>My Saved Movies</Link>
+        <Link className='favourites' to='/favourites'>My Saved Movies</Link>
     </header>
   )
 }

@@ -13,7 +13,7 @@ export default function RoutesApp() {
       <Routes>
         <Route path="/primeflix" element={<Home />} />
         <Route path="/movie/:id" element={<Movies />} />
-        <Route path="/favourites" element={<Favourites />} />
+        <Route path="favourites" element={<Favourites />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
