@@ -49,5 +49,24 @@
 }
 
 
+@media (max-width: 600px) {
+    .my-list li {
+      flex-direction: column; /* Stack the content vertically */
+      align-items: flex-start;
+    }
+  
+    .my-list li div {
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+  
+    .my-list li div a,
+    .my-list li div button {
+      font-size: 14px; /* Slightly smaller font for smaller screens */
+      padding: 6px 10px;
+    }
+  }
+
+
 
 

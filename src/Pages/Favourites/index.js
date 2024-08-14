@@ -36,7 +36,9 @@ export default function Favourites() {
               <span>{movie.title}</span>
               <div>
                 <Link to={`/movie/${movie.id}`}>See details</Link>
-                <button onClick={() => deleteMovie(movie.id)}>Delete</button>
+                <button class="button-18" role="button" onClick={() => deleteMovie(movie.id)}>
+                  <i class="fas fa-trash-alt"></i>
+                </button>
               </div>
             </li>
           )

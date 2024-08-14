@@ -8,20 +8,24 @@ import './Home.css';
 export default function Home() {
   const [movies, setMovies] =  useState([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
-    async function loadMovies(){
+    async function loadMovies(page = 1){
       const response = await api.get("movie/now_playing", {
         params:{
           api_key: `${process.env.REACT_APP_API_KEY}`,
-          page: 1,
+          page: page,
         }
       })
-      setMovies(response.data.results.splice(0, 10))
+      setMovies(response.data.results);
+      setTotalPages(response.data.total_pages);
       setLoading(false);
     }
-   loadMovies(); 
-  }, [])
+   loadMovies(currentPage); 
+   window.scrollTo(0, 0);
+  }, [currentPage])
 
   if(loading){
     return(
@@ -29,6 +33,18 @@ export default function Home() {
         <h2>Loading</h2>
       </div>
     )
+  }
+
+  function handlePrevious() {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  }
+
+  function handleNext() {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
   }
 
   return (
@@ -43,6 +59,11 @@ export default function Home() {
             </article>
           )
         })}
+      </div>
+      <div className='pagination'>
+        <button class="button-18" role="button" onClick={handlePrevious} disabled={currentPage === 1}>Back</button>
+        <span>Page {currentPage} of {totalPages}</span>
+        <button class="button-18" role="button" onClick={handleNext} disabled={currentPage === totalPages}>Next</button>
       </div>
     </div>
   )

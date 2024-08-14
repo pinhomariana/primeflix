@@ -8,6 +8,7 @@
     background-color: #FFFFFF;
     padding: 15px;
     border-radius: 4px;
+    transition: transform 0.3s ease;
 }
 
 .movies-list img{
@@ -17,8 +18,12 @@
     object-fit: cover;
     display: block;
     border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-right-radius: 8px;   
 }
+
+.movies-list article:hover {
+    transform: scale(1.05); 
+  }
 
 .movies-list strong{
     margin-bottom: 14px;
@@ -46,4 +51,67 @@
     align-items: center;
     margin-top: 14px;
 }
+
+.movies-list article strong {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.movies-list article a {
+    font-weight: 300;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    margin: 20px 0; 
+    padding: 10px;
+}
+
+.button-18 {
+  align-items: center;
+  background-color: #000000;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 150px;
+  min-height: 40px;
+  padding: 0px 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button-18:hover { 
+  background-color: #3e3f40;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .pagination {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .button-18 {
+      width: 100%; 
+      max-width: none;
+      padding: 10px 0; 
+    }
+  }
 

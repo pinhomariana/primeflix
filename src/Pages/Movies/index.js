@@ -69,8 +69,8 @@ function Movie(){
       <strong>Rating: {movie.vote_average.toFixed(2)} / 10</strong>
 
       <div className="area-buttons">
-        <button onClick={saveMovie}>Save Movie</button>
-        <button>
+        <button class="button-18" role="button" onClick={saveMovie}>Save</button>
+        <button class="button-18" role="button">
           <a target="_blank" rel="external" href={`https://youtube.com/results?search_query=${movie.title} Trailer`}>
             Trailer
           </a>
